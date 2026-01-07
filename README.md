@@ -12,6 +12,7 @@
 - [기술 스택](#-기술-스택)
 - [프로젝트 구조](#-프로젝트-구조)
 - [설치 및 실행](#-설치-및-실행)
+- [LocalStack 설정](#localstack-설정)
 - [개발 가이드](#-개발-가이드)
 - [테스트](#-테스트)
 - [배포](#-배포)
@@ -261,6 +262,121 @@ npm run dev
 docker-compose up -d
 ```
 
+### LocalStack 설정
+
+**LocalStack**은 AWS 서비스를 로컬 개발 환경에서 시뮬레이션하는 도구입니다. 이 프로젝트는 S3(파일 저장소)와 SES(이메일 서비스)를 LocalStack으로 에뮬레이션합니다.
+
+#### LocalStack 소개
+
+- **용도**: AWS 서비스를 로컬 환경에서 테스트
+- **지원 서비스**: S3, SES, Lambda, DynamoDB, SNS, SQS 등
+- **개발 장점**:
+  - AWS 계정 없이 개발 가능
+  - 비용 절감
+  - 빠른 로컬 테스트
+  - 실제 AWS와 동일한 API
+
+#### LocalStack 실행
+
+**docker-compose.yml에 이미 설정되어 있으므로:**
+
+```bash
+# LocalStack과 함께 모든 서비스 시작
+docker-compose up -d
+
+# LocalStack이 준비되었는지 확인
+docker-compose logs localstack | grep "Ready"
+```
+
+#### LocalStack 포트 및 엔드포인트
+
+```
+LocalStack 관리 UI: http://localhost:4566
+AWS 서비스 엔드포인트: http://localhost:4566
+
+서비스별 포트:
+- S3 (파일 저장소): 4566
+- SES (이메일): 4566
+- DynamoDB: 4566
+```
+
+#### 환경 변수 설정 (LocalStack 사용)
+
+**백엔드 .env 파일에서:**
+```
+# AWS (LocalStack 연동)
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=test
+AWS_SECRET_ACCESS_KEY=test
+AWS_S3_BUCKET=parts-monitor
+AWS_ENDPOINT_URL=http://localhost:4566
+
+# SES 이메일 설정 (LocalStack)
+AWS_SES_REGION=us-east-1
+AWS_SES_FROM_EMAIL=noreply@parts-monitor.local
+```
+
+#### LocalStack 초기화
+
+프로젝트에 포함된 초기화 스크립트를 실행합니다:
+
+```bash
+# LocalStack 초기화 (S3 버킷 생성, SES 설정)
+docker-compose exec localstack bash /docker-entrypoint-initaws.d/init-localstack.sh
+
+# 또는 수동으로 버킷 생성
+aws s3 mb s3://parts-monitor \
+  --endpoint-url http://localhost:4566 \
+  --region us-east-1
+
+# SES 이메일 검증 (로컬)
+aws ses verify-email-identity \
+  --email-address noreply@parts-monitor.local \
+  --endpoint-url http://localhost:4566 \
+  --region us-east-1
+```
+
+#### LocalStack 문제 해결
+
+**LocalStack이 실행되지 않을 때:**
+```bash
+# 로그 확인
+docker-compose logs localstack
+
+# 컨테이너 재시작
+docker-compose restart localstack
+
+# 완전 초기화
+docker-compose down -v
+docker-compose up -d
+```
+
+**S3 파일 확인:**
+```bash
+# LocalStack에 저장된 파일 목록
+aws s3 ls s3://parts-monitor \
+  --endpoint-url http://localhost:4566 \
+  --recursive
+```
+
+**SES 이메일 전송 테스트:**
+```bash
+# 테스트 이메일 발송
+aws ses send-email \
+  --from noreply@parts-monitor.local \
+  --to test@example.com \
+  --subject "Test Email" \
+  --text "This is a test email from LocalStack" \
+  --endpoint-url http://localhost:4566 \
+  --region us-east-1
+```
+
+#### 개발 중 LocalStack 사용
+
+- **파일 업로드 테스트**: 견적서 PDF, Excel 파일 등을 S3에 저장
+- **이메일 발송 테스트**: SES를 통한 알림 메일, 견적서 이메일 발송
+- **통합 테스트**: 실제 AWS 없이 AWS 연동 기능 테스트
+
 ## 👨‍💻 개발 가이드
 
 ### 코드 스타일
@@ -421,7 +537,7 @@ docker run -p 3001:3001 parts-monitor-frontend
 
 - **Issues**: [GitHub Issues](https://github.com/jinyounghwa/parts-monitor/issues)
 - **Discussion**: [GitHub Discussions](https://github.com/jinyounghwa/parts-monitor/discussions)
-- **Email**: dev@parts-monitor.local
+- **Email**: timotolkie@gmail.com
 
 ## 🙏 감사의 말
 
