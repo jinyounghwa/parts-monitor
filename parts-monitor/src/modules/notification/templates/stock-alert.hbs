@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>재고 알림</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .alert-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .alert-box.danger {
+            background: #f8d7da;
+            border-left-color: #dc3545;
+        }
+        .part-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .site-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .stock-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 15px 0;
+        }
+        .stock-current {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .stock-status {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .status-in-stock {
+            background: #d4edda;
+            color: #155724;
+        }
+        .status-low-stock {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .status-out-of-stock {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            color: #999;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>재고 알림</h1>
+        <p>모니터링 대상 부품의 재고 상태가 변경되었습니다.</p>
+    </div>
+
+    <div class="alert-box {{#if (eq stockStatus 'out_of_stock')}}danger{{else if (eq stockStatus 'low_stock')}}warning{{/if}}">
+        <div class="part-number">{{product.partNumber}}</div>
+        <p>{{product.manufacturer}} - {{product.description}}</p>
+        
+        <div class="site-info">
+            <h3>{{site}} 사이트</h3>
+            <div class="stock-info">
+                <div>
+                    <div>현재 재고</div>
+                    <div class="stock-current">{{formatNumber stockQuantity}}개</div>
+                </div>
+                <div class="stock-status status-{{stockStatus}}">
+                    {{stockStatusText}}
+                </div>
+            </div>
+            <p><strong>납기일:</strong> {{leadTime}}</p>
+        </div>
+
+        {{#if productUrl}}
+        <a href="{{productUrl}}" class="cta-button">제품 상세페이지 보기</a>
+        {{/if}}
+    </div>
+
+    <div class="footer">
+        <p>이 메일은 자동으로 발송됩니다. 문의사항은 관리자에게 연락해 주세요.</p>
+    </div>
+</body>
+</html>

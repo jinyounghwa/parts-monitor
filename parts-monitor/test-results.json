@@ -1,0 +1,3375 @@
+{
+  "config": {
+    "configFile": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/playwright.config.ts",
+    "rootDir": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "api",
+        "name": "api",
+        "testDir": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 5,
+    "webServer": {
+      "command": "npm run start:dev",
+      "url": "http://localhost:3000",
+      "reuseExistingServer": true,
+      "timeout": 120000,
+      "env": {
+        "DATABASE_HOST": "127.0.0.1",
+        "DATABASE_PORT": "5433",
+        "DATABASE_USER": "postgres",
+        "DATABASE_PASSWORD": "postgres",
+        "DATABASE_NAME": "parts_inventory_test",
+        "AWS_ENDPOINT_URL": "http://127.0.0.1:4566",
+        "AWS_ACCESS_KEY_ID": "test",
+        "AWS_SECRET_ACCESS_KEY": "test"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "auth/auth.spec.ts",
+      "file": "auth/auth.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication API",
+          "file": "auth/auth.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "POST /api/auth/register - Register new user",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 101,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts:16:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                          "column": 27,
+                          "line": 16
+                        },
+                        "snippet": "  14 |     });\n  15 |\n> 16 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  17 |     const data = await response.json();\n  18 |     expect(data).toHaveProperty('access_token');\n  19 |     expect(data).toHaveProperty('user');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                            "column": 27,
+                            "line": 16
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  14 |     });\n  15 |\n> 16 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  17 |     const data = await response.json();\n  18 |     expect(data).toHaveProperty('access_token');\n  19 |     expect(data).toHaveProperty('user');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts:16:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.058Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                        "column": 27,
+                        "line": 16
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "11ab049aabb515b3eeb7-ce6513b09d84f03a6d3a",
+              "file": "auth/auth.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "POST /api/auth/login - Login with valid credentials",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 52,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts:31:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                          "column": 27,
+                          "line": 31
+                        },
+                        "snippet": "  29 |     });\n  30 |\n> 31 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  32 |     const data = await response.json();\n  33 |     expect(data).toHaveProperty('access_token');\n  34 |     expect(data).toHaveProperty('user');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                            "column": 27,
+                            "line": 31
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  29 |     });\n  30 |\n> 31 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  32 |     const data = await response.json();\n  33 |     expect(data).toHaveProperty('access_token');\n  34 |     expect(data).toHaveProperty('user');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts:31:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.050Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                        "column": 27,
+                        "line": 31
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "11ab049aabb515b3eeb7-fda01f1fd617f06b7b32",
+              "file": "auth/auth.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "POST /api/auth/login - Fail with invalid credentials",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 33,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.069Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "11ab049aabb515b3eeb7-2afe105ce503079b9492",
+              "file": "auth/auth.spec.ts",
+              "line": 38,
+              "column": 7
+            },
+            {
+              "title": "GET /api/auth/profile - Get user profile",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 52,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts:67:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                          "column": 27,
+                          "line": 67
+                        },
+                        "snippet": "  65 |     });\n  66 |\n> 67 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  68 |     const data = await response.json();\n  69 |     expect(data).toHaveProperty('username');\n  70 |     expect(data).toHaveProperty('email');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                            "column": 27,
+                            "line": 67
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  65 |     });\n  66 |\n> 67 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  68 |     const data = await response.json();\n  69 |     expect(data).toHaveProperty('username');\n  70 |     expect(data).toHaveProperty('email');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts:67:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.042Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/auth/auth.spec.ts",
+                        "column": 27,
+                        "line": 67
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "11ab049aabb515b3eeb7-88f6e258a17b604ddb45",
+              "file": "auth/auth.spec.ts",
+              "line": 49,
+              "column": 7
+            },
+            {
+              "title": "GET /api/auth/profile - Fail without authentication",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 34,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.058Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "11ab049aabb515b3eeb7-00755aa5abb00da54d8a",
+              "file": "auth/auth.spec.ts",
+              "line": 74,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "customers/customers.spec.ts",
+      "file": "customers/customers.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Customers API",
+          "file": "customers/customers.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "POST /customers - Create new customer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 20,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.103Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cea04daca23608812dae-582f5fcd5f17d690246b",
+              "file": "customers/customers.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "GET /customers - Get all customers",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.512Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cea04daca23608812dae-6a7592bb5ae27865d5d5",
+              "file": "customers/customers.spec.ts",
+              "line": 46,
+              "column": 7
+            },
+            {
+              "title": "GET /customers/:id - Get single customer",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 15,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts:65:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts",
+                          "column": 27,
+                          "line": 65
+                        },
+                        "snippet": "  63 |     });\n  64 |\n> 65 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  66 |     const data = await response.json();\n  67 |     expect(data.id).toBe(customerId);\n  68 |     expect(data.code).toBe('CUS-001');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts",
+                            "column": 27,
+                            "line": 65
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  63 |     });\n  64 |\n> 65 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  66 |     const data = await response.json();\n  67 |     expect(data.id).toBe(customerId);\n  68 |     expect(data.code).toBe('CUS-001');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts:65:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.114Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts",
+                        "column": 27,
+                        "line": 65
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "cea04daca23608812dae-9b8d546dab36f68596a0",
+              "file": "customers/customers.spec.ts",
+              "line": 58,
+              "column": 7
+            },
+            {
+              "title": "PATCH /customers/:id - Update customer",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts:81:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts",
+                          "column": 27,
+                          "line": 81
+                        },
+                        "snippet": "  79 |     });\n  80 |\n> 81 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  82 |     const data = await response.json();\n  83 |     expect(data.discountRate).toBe(10);\n  84 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts",
+                            "column": 27,
+                            "line": 81
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  79 |     });\n  80 |\n> 81 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  82 |     const data = await response.json();\n  83 |     expect(data.discountRate).toBe(10);\n  84 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts:81:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.495Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/customers/customers.spec.ts",
+                        "column": 27,
+                        "line": 81
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "cea04daca23608812dae-ebc08cc71cc062587221",
+              "file": "customers/customers.spec.ts",
+              "line": 71,
+              "column": 7
+            },
+            {
+              "title": "DELETE /customers/:id - Delete customer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 16,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.145Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cea04daca23608812dae-0b96f0b6f1c6b2389a78",
+              "file": "customers/customers.spec.ts",
+              "line": 86,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "dashboard/dashboard.spec.ts",
+      "file": "dashboard/dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Dashboard API",
+          "file": "dashboard/dashboard.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /api/dashboard/summary - Get dashboard summary",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:22:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                          "column": 27,
+                          "line": 22
+                        },
+                        "snippet": "  20 |     });\n  21 |\n> 22 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  23 |     const data = await response.json();\n  24 |     expect(data).toHaveProperty('inventory');\n  25 |     expect(data).toHaveProperty('quotations');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                            "column": 27,
+                            "line": 22
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  20 |     });\n  21 |\n> 22 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  23 |     const data = await response.json();\n  24 |     expect(data).toHaveProperty('inventory');\n  25 |     expect(data).toHaveProperty('quotations');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:22:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.541Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                        "column": 27,
+                        "line": 22
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "747340cde928aa6c3216-54240b55abb0b41c3e01",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "GET /api/dashboard/inventory-summary - Get inventory summary",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:46:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                          "column": 27,
+                          "line": 46
+                        },
+                        "snippet": "  44 |     });\n  45 |\n> 46 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  47 |     const data = await response.json();\n  48 |     expect(data).toHaveProperty('total');\n  49 |     expect(data).toHaveProperty('low');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                            "column": 27,
+                            "line": 46
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  44 |     });\n  45 |\n> 46 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  47 |     const data = await response.json();\n  48 |     expect(data).toHaveProperty('total');\n  49 |     expect(data).toHaveProperty('low');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:46:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.568Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                        "column": 27,
+                        "line": 46
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "747340cde928aa6c3216-edd860e86eea9460faf8",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "GET /api/dashboard/alerts - Get recent alerts",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 6,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:60:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                          "column": 27,
+                          "line": 60
+                        },
+                        "snippet": "  58 |     });\n  59 |\n> 60 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  61 |     const data = await response.json();\n  62 |     expect(data).toHaveProperty('priceAlerts');\n  63 |     expect(data).toHaveProperty('stockAlerts');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                            "column": 27,
+                            "line": 60
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  58 |     });\n  59 |\n> 60 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  61 |     const data = await response.json();\n  62 |     expect(data).toHaveProperty('priceAlerts');\n  63 |     expect(data).toHaveProperty('stockAlerts');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:60:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.184Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                        "column": 27,
+                        "line": 60
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "747340cde928aa6c3216-4d1c866f3236b42a4861",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 55,
+              "column": 7
+            },
+            {
+              "title": "GET /api/dashboard/alerts with limit",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:73:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                          "column": 27,
+                          "line": 73
+                        },
+                        "snippet": "  71 |     });\n  72 |\n> 73 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  74 |     const data = await response.json();\n  75 |     expect(data.priceAlerts.length).toBeLessThanOrEqual(5);\n  76 |     expect(data.stockAlerts.length).toBeLessThanOrEqual(5);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                            "column": 27,
+                            "line": 73
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  71 |     });\n  72 |\n> 73 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  74 |     const data = await response.json();\n  75 |     expect(data.priceAlerts.length).toBeLessThanOrEqual(5);\n  76 |     expect(data.stockAlerts.length).toBeLessThanOrEqual(5);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts:73:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.583Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/dashboard/dashboard.spec.ts",
+                        "column": 27,
+                        "line": 73
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "747340cde928aa6c3216-7b6368ce644aa6d6fd9f",
+              "file": "dashboard/dashboard.spec.ts",
+              "line": 68,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e-tests.spec.ts",
+      "file": "e2e-tests.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Parts Monitor Application E2E Tests",
+          "file": "e2e-tests.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Backend health check should return ok status",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 239,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.959Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b206d3bb6522049888c6-58089991ab7b17bfa4aa",
+              "file": "e2e-tests.spec.ts",
+              "line": 9,
+              "column": 7
+            },
+            {
+              "title": "Frontend should load successfully",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 442,
+                      "error": {
+                        "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"networkidle\"\u001b[22m\n",
+                        "stack": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"networkidle\"\u001b[22m\n\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/e2e-tests.spec.ts:17:16",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/e2e-tests.spec.ts",
+                          "column": 16,
+                          "line": 17
+                        },
+                        "snippet": "  15 |\n  16 |   test('Frontend should load successfully', async ({ page }) => {\n> 17 |     await page.goto('http://localhost:3001', { waitUntil: 'networkidle' });\n     |                ^\n  18 |\n  19 |     // Check that the page has loaded\n  20 |     await expect(page).toHaveTitle(/Home|Login|Dashboard/i);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/e2e-tests.spec.ts",
+                            "column": 16,
+                            "line": 17
+                          },
+                          "message": "Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3001/\", waiting until \"networkidle\"\u001b[22m\n\n\n  15 |\n  16 |   test('Frontend should load successfully', async ({ page }) => {\n> 17 |     await page.goto('http://localhost:3001', { waitUntil: 'networkidle' });\n     |                ^\n  18 |\n  19 |     // Check that the page has loaded\n  20 |     await expect(page).toHaveTitle(/Home|Login|Dashboard/i);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/e2e-tests.spec.ts:17:16"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:05.582Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/test-results/e2e-tests-Parts-Monitor-Ap-cd732-nd-should-load-successfully-api/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/test-results/e2e-tests-Parts-Monitor-Ap-cd732-nd-should-load-successfully-api/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/e2e-tests.spec.ts",
+                        "column": 16,
+                        "line": 17
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b206d3bb6522049888c6-8741c263f8a157b7834f",
+              "file": "e2e-tests.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "Backend should have auth endpoints available",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 288,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.030Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b206d3bb6522049888c6-abac5b8a110941c6f378",
+              "file": "e2e-tests.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "Backend should have product endpoints available",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 226,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.054Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b206d3bb6522049888c6-63087ec51a7a9add2de3",
+              "file": "e2e-tests.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "Backend should have dashboard endpoints available",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
+                      "status": "passed",
+                      "duration": 205,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.070Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b206d3bb6522049888c6-0053951c5f51263b3e0a",
+              "file": "e2e-tests.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "All required services should be running",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 468,
+                      "error": {
+                        "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.57.0 (arm64; macOS 26.1) node/25.2\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n",
+                        "stack": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.57.0 (arm64; macOS 26.1) node/25.2\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/e2e-tests.spec.ts:65:44",
+                        "location": {
+                          "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                          "column": 3001,
+                          "line": 1
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                            "column": 3001,
+                            "line": 1
+                          },
+                          "message": "Error: apiRequestContext.get: connect ECONNREFUSED ::1:3001\nCall log:\n\u001b[2m  - → GET http://localhost:3001/\u001b[22m\n\u001b[2m    - user-agent: Playwright/1.57.0 (arm64; macOS 26.1) node/25.2\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\n    at apiRequestContext.get: connect ECONNREFUSED ::1:3001\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/e2e-tests.spec.ts:65:44"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.383Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/test-results/e2e-tests-Parts-Monitor-Ap-5bbc7--services-should-be-running-api/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/test-results/e2e-tests-Parts-Monitor-Ap-5bbc7--services-should-be-running-api/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "apiRequestContext.get: connect ECONNREFUSED :",
+                        "column": 3001,
+                        "line": 1
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b206d3bb6522049888c6-6a6d22c8bf3ea87e2bde",
+              "file": "e2e-tests.spec.ts",
+              "line": 59,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "excel/excel.spec.ts",
+      "file": "excel/excel.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Excel API",
+          "file": "excel/excel.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /excel/export/products - Export products to Excel",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:44:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                          "column": 27,
+                          "line": 44
+                        },
+                        "snippet": "  42 |     });\n  43 |\n> 44 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  45 |     const contentType = response.headers()['content-type'];\n  46 |     expect(contentType).toContain('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n  47 |     const contentDisposition = response.headers()['content-disposition'];"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                            "column": 27,
+                            "line": 44
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  42 |     });\n  43 |\n> 44 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  45 |     const contentType = response.headers()['content-type'];\n  46 |     expect(contentType).toContain('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n  47 |     const contentDisposition = response.headers()['content-disposition'];\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:44:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.866Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                        "column": 27,
+                        "line": 44
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b9837f2c080ce89e6ba2-76f55c6d2a7ab29cf384",
+              "file": "excel/excel.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "GET /excel/export/inventory - Export inventory to Excel",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 11,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:56:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                          "column": 27,
+                          "line": 56
+                        },
+                        "snippet": "  54 |     });\n  55 |\n> 56 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  57 |     const contentType = response.headers()['content-type'];\n  58 |     expect(contentType).toContain('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n  59 |     const contentDisposition = response.headers()['content-disposition'];"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                            "column": 27,
+                            "line": 56
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  54 |     });\n  55 |\n> 56 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  57 |     const contentType = response.headers()['content-type'];\n  58 |     expect(contentType).toContain('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');\n  59 |     const contentDisposition = response.headers()['content-disposition'];\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:56:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.535Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                        "column": 27,
+                        "line": 56
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b9837f2c080ce89e6ba2-458851096d71d3cd0dcd",
+              "file": "excel/excel.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "POST /excel/import/products - Import products from Excel",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 27,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:122:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                          "column": 27,
+                          "line": 122
+                        },
+                        "snippet": "  120 |     });\n  121 |\n> 122 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  123 |     const data = await response.json();\n  124 |     expect(data).toHaveProperty('imported');\n  125 |     expect(data).toHaveProperty('failed');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                            "column": 27,
+                            "line": 122
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  120 |     });\n  121 |\n> 122 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  123 |     const data = await response.json();\n  124 |     expect(data).toHaveProperty('imported');\n  125 |     expect(data).toHaveProperty('failed');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:122:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.536Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                        "column": 27,
+                        "line": 122
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b9837f2c080ce89e6ba2-f9790f157659939371dc",
+              "file": "excel/excel.spec.ts",
+              "line": 63,
+              "column": 7
+            },
+            {
+              "title": "POST /excel/import/products - Fail with invalid data",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 19,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:155:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                          "column": 27,
+                          "line": 155
+                        },
+                        "snippet": "  153 |     });\n  154 |\n> 155 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  156 |     const data = await response.json();\n  157 |     expect(data).toHaveProperty('imported');\n  158 |     expect(data).toHaveProperty('failed');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                            "column": 27,
+                            "line": 155
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  153 |     });\n  154 |\n> 155 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  156 |     const data = await response.json();\n  157 |     expect(data).toHaveProperty('imported');\n  158 |     expect(data).toHaveProperty('failed');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts:155:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:06.574Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/excel/excel.spec.ts",
+                        "column": 27,
+                        "line": 155
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b9837f2c080ce89e6ba2-7993e3adcd2fd9779247",
+              "file": "excel/excel.spec.ts",
+              "line": 129,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "inventory/inventory.spec.ts",
+      "file": "inventory/inventory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Inventory API",
+          "file": "inventory/inventory.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /inventory - Get all inventory status",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 15,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:62:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 62
+                        },
+                        "snippet": "  60 |     });\n  61 |\n> 62 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  63 |     const data = await response.json();\n  64 |     expect(Array.isArray(data)).toBeTruthy();\n  65 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 62
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  60 |     });\n  61 |\n> 62 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  63 |     const data = await response.json();\n  64 |     expect(Array.isArray(data)).toBeTruthy();\n  65 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:62:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.109Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 62
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-8ab0086a14bc3be39c8d",
+              "file": "inventory/inventory.spec.ts",
+              "line": 57,
+              "column": 7
+            },
+            {
+              "title": "GET /inventory/:productId - Get specific inventory",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 20,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:72:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 72
+                        },
+                        "snippet": "  70 |     });\n  71 |\n> 72 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  73 |     const data = await response.json();\n  74 |     expect(data.productId).toBe(productId);\n  75 |     expect(data.quantity).toBe(50);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 72
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  70 |     });\n  71 |\n> 72 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  73 |     const data = await response.json();\n  74 |     expect(data.productId).toBe(productId);\n  75 |     expect(data.quantity).toBe(50);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:72:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.623Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 72
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-61af2af091b9db4a5fcf",
+              "file": "inventory/inventory.spec.ts",
+              "line": 67,
+              "column": 7
+            },
+            {
+              "title": "POST /inventory/stock-in - Stock in operation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 16,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:91:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 91
+                        },
+                        "snippet": "  89 |     });\n  90 |\n> 91 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  92 |     const data = await response.json();\n  93 |     expect(data.inventory.quantity).toBe(70);\n  94 |     expect(data.transaction.type).toBe('IN');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 91
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  89 |     });\n  90 |\n> 91 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  92 |     const data = await response.json();\n  93 |     expect(data.inventory.quantity).toBe(70);\n  94 |     expect(data.transaction.type).toBe('IN');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:91:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.121Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 91
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-3d46ebbc257791aff0ce",
+              "file": "inventory/inventory.spec.ts",
+              "line": 78,
+              "column": 7
+            },
+            {
+              "title": "POST /inventory/stock-out - Stock out operation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 21,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:109:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 109
+                        },
+                        "snippet": "  107 |     });\n  108 |\n> 109 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  110 |     const data = await response.json();\n  111 |     expect(data.inventory.quantity).toBe(55);\n  112 |     expect(data.transaction.type).toBe('OUT');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 109
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  107 |     });\n  108 |\n> 109 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  110 |     const data = await response.json();\n  111 |     expect(data.inventory.quantity).toBe(55);\n  112 |     expect(data.transaction.type).toBe('OUT');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:109:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.621Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 109
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-d8a56106bd89f559c705",
+              "file": "inventory/inventory.spec.ts",
+              "line": 97,
+              "column": 7
+            },
+            {
+              "title": "POST /inventory/adjust - Adjust stock quantity",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 17,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:127:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 127
+                        },
+                        "snippet": "  125 |     });\n  126 |\n> 127 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  128 |     const data = await response.json();\n  129 |     expect(data.inventory.quantity).toBe(100);\n  130 |     expect(data.transaction.type).toBe('ADJUST');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 127
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  125 |     });\n  126 |\n> 127 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  128 |     const data = await response.json();\n  129 |     expect(data.inventory.quantity).toBe(100);\n  130 |     expect(data.transaction.type).toBe('ADJUST');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:127:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.145Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 127
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-dbd8a39add49321cacc2",
+              "file": "inventory/inventory.spec.ts",
+              "line": 115,
+              "column": 7
+            },
+            {
+              "title": "GET /inventory/:productId/transactions - Get transaction history",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:138:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 138
+                        },
+                        "snippet": "  136 |     });\n  137 |\n> 138 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  139 |     const data = await response.json();\n  140 |     expect(Array.isArray(data)).toBeTruthy();\n  141 |     expect(data.length).toBeGreaterThan(0);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 138
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  136 |     });\n  137 |\n> 138 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  139 |     const data = await response.json();\n  140 |     expect(Array.isArray(data)).toBeTruthy();\n  141 |     expect(data.length).toBeGreaterThan(0);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:138:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.651Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 138
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-89de8762eaa8aacd1aaa",
+              "file": "inventory/inventory.spec.ts",
+              "line": 133,
+              "column": 7
+            },
+            {
+              "title": "GET /inventory/alerts/low-stock - Get low stock alerts",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 18,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 9,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:153:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 153
+                        },
+                        "snippet": "  151 |     });\n  152 |\n> 153 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  154 |     const data = await response.json();\n  155 |     expect(Array.isArray(data)).toBeTruthy();\n  156 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 153
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  151 |     });\n  152 |\n> 153 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  154 |     const data = await response.json();\n  155 |     expect(Array.isArray(data)).toBeTruthy();\n  156 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:153:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.345Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 153
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-b87a1737ece2bd7bc052",
+              "file": "inventory/inventory.spec.ts",
+              "line": 148,
+              "column": 7
+            },
+            {
+              "title": "PATCH /inventory/:productId/safety-stock - Update safety stock",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 23,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 5,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:168:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 27,
+                          "line": 168
+                        },
+                        "snippet": "  166 |     });\n  167 |\n> 168 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  169 |     const data = await response.json();\n  170 |     expect(data.safetyStock).toBe(20);\n  171 |     expect(data.reorderPoint).toBe(10);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 27,
+                            "line": 168
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  166 |     });\n  167 |\n> 168 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  169 |     const data = await response.json();\n  170 |     expect(data.safetyStock).toBe(20);\n  171 |     expect(data.reorderPoint).toBe(10);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:168:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.844Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 27,
+                        "line": 168
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-af3c6588571b86ded163",
+              "file": "inventory/inventory.spec.ts",
+              "line": 158,
+              "column": 7
+            },
+            {
+              "title": "POST /inventory/stock-out - Fail with insufficient stock",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 19,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 11,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m404\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:184:31",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                          "column": 31,
+                          "line": 184
+                        },
+                        "snippet": "  182 |     });\n  183 |\n> 184 |     expect(response.status()).toBe(400);\n      |                               ^\n  185 |   });\n  186 | });\n  187 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                            "column": 31,
+                            "line": 184
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m400\u001b[39m\nReceived: \u001b[31m404\u001b[39m\n\n  182 |     });\n  183 |\n> 184 |     expect(response.status()).toBe(400);\n      |                               ^\n  185 |   });\n  186 | });\n  187 |\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts:184:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.454Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/inventory/inventory.spec.ts",
+                        "column": 31,
+                        "line": 184
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7d7f6011aa5f9f81b479-b4a29f6a60a800cfc12a",
+              "file": "inventory/inventory.spec.ts",
+              "line": 174,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "products/products.spec.ts",
+      "file": "products/products.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Products API",
+          "file": "products/products.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "POST /api/products - Create new product",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 24,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 9,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:40:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                          "column": 27,
+                          "line": 40
+                        },
+                        "snippet": "  38 |     });\n  39 |\n> 40 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  41 |     const data = await response.json();\n  42 |     expect(data).toHaveProperty('id');\n  43 |     expect(data.partNumber).toBe('RES-001');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                            "column": 27,
+                            "line": 40
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  38 |     });\n  39 |\n> 40 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  41 |     const data = await response.json();\n  42 |     expect(data).toHaveProperty('id');\n  43 |     expect(data.partNumber).toBe('RES-001');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:40:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:07.946Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                        "column": 27,
+                        "line": 40
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "05639c743d7c8d7016af-e7ba50635ba2261a499a",
+              "file": "products/products.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "GET /api/products - Get all products",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.121Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "05639c743d7c8d7016af-6dd114a8d5083b68baf1",
+              "file": "products/products.spec.ts",
+              "line": 48,
+              "column": 7
+            },
+            {
+              "title": "GET /api/products/:id - Get single product",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 26,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 13,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:67:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                          "column": 27,
+                          "line": 67
+                        },
+                        "snippet": "  65 |     });\n  66 |\n> 67 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  68 |     const data = await response.json();\n  69 |     expect(data.id).toBe(productId);\n  70 |     expect(data.partNumber).toBe('RES-001');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                            "column": 27,
+                            "line": 67
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  65 |     });\n  66 |\n> 67 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  68 |     const data = await response.json();\n  69 |     expect(data.id).toBe(productId);\n  70 |     expect(data.partNumber).toBe('RES-001');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:67:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.118Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                        "column": 27,
+                        "line": 67
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "05639c743d7c8d7016af-0569edf95de184edf91a",
+              "file": "products/products.spec.ts",
+              "line": 60,
+              "column": 7
+            },
+            {
+              "title": "PATCH /api/products/:id - Update product",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 27,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 10,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:83:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                          "column": 27,
+                          "line": 83
+                        },
+                        "snippet": "  81 |     });\n  82 |\n> 83 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  84 |     const data = await response.json();\n  85 |     expect(data.standardPrice).toBe(120);\n  86 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                            "column": 27,
+                            "line": 83
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  81 |     });\n  82 |\n> 83 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  84 |     const data = await response.json();\n  85 |     expect(data.standardPrice).toBe(120);\n  86 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:83:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.168Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                        "column": 27,
+                        "line": 83
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "05639c743d7c8d7016af-268fb9779935f5968ef8",
+              "file": "products/products.spec.ts",
+              "line": 73,
+              "column": 7
+            },
+            {
+              "title": "DELETE /api/products/:id - Delete product",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 28,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 12,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m500\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m500\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:95:31",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                          "column": 31,
+                          "line": 95
+                        },
+                        "snippet": "  93 |     });\n  94 |\n> 95 |     expect(response.status()).toBe(204);\n     |                               ^\n  96 |   });\n  97 | });\n  98 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                            "column": 31,
+                            "line": 95
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m500\u001b[39m\n\n  93 |     });\n  94 |\n> 95 |     expect(response.status()).toBe(204);\n     |                               ^\n  96 |   });\n  97 | });\n  98 |\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts:95:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.335Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/products/products.spec.ts",
+                        "column": 31,
+                        "line": 95
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "05639c743d7c8d7016af-9fed3e15af86b9c478c4",
+              "file": "products/products.spec.ts",
+              "line": 88,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "quotations/quotations.spec.ts",
+      "file": "quotations/quotations.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Quotations API",
+          "file": "quotations/quotations.spec.ts",
+          "line": 10,
+          "column": 6,
+          "specs": [
+            {
+              "title": "POST /quotations - Create new quotation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 29,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:73:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 73
+                        },
+                        "snippet": "  71 |     });\n  72 |\n> 73 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  74 |     const data = await response.json();\n  75 |     expect(data).toHaveProperty('id');\n  76 |     expect(data).toHaveProperty('quotationNumber');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 73
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  71 |     });\n  72 |\n> 73 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  74 |     const data = await response.json();\n  75 |     expect(data).toHaveProperty('id');\n  76 |     expect(data).toHaveProperty('quotationNumber');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:73:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.426Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 73
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-c6c5e5aaa5b69fd79b49",
+              "file": "quotations/quotations.spec.ts",
+              "line": 51,
+              "column": 7
+            },
+            {
+              "title": "GET /quotations - Get all quotations",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 34,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 11,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:91:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 91
+                        },
+                        "snippet": "  89 |     });\n  90 |\n> 91 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  92 |     const data = await response.json();\n  93 |     expect(Array.isArray(data)).toBeTruthy();\n  94 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 91
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  89 |     });\n  90 |\n> 91 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  92 |     const data = await response.json();\n  93 |     expect(Array.isArray(data)).toBeTruthy();\n  94 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:91:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.919Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 91
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-4b86f759173565c250ef",
+              "file": "quotations/quotations.spec.ts",
+              "line": 86,
+              "column": 7
+            },
+            {
+              "title": "GET /quotations with filters",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 25,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:101:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 101
+                        },
+                        "snippet": "   99 |     });\n  100 |\n> 101 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  102 |     const data = await response.json();\n  103 |     expect(Array.isArray(data)).toBeTruthy();\n  104 |     data.forEach((q: any) => expect(q.status).toBe('draft'));"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 101
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n   99 |     });\n  100 |\n> 101 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  102 |     const data = await response.json();\n  103 |     expect(Array.isArray(data)).toBeTruthy();\n  104 |     data.forEach((q: any) => expect(q.status).toBe('draft'));\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:101:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.242Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 101
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-e36d965a5c835b21edda",
+              "file": "quotations/quotations.spec.ts",
+              "line": 96,
+              "column": 7
+            },
+            {
+              "title": "GET /quotations/:id - Get single quotation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 32,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 9,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:112:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 112
+                        },
+                        "snippet": "  110 |     });\n  111 |\n> 112 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  113 |     const data = await response.json();\n  114 |     expect(data.id).toBe(quotationId);\n  115 |     expect(data).toHaveProperty('quotationNumber');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 112
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  110 |     });\n  111 |\n> 112 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  113 |     const data = await response.json();\n  114 |     expect(data.id).toBe(quotationId);\n  115 |     expect(data).toHaveProperty('quotationNumber');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:112:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.709Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 112
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-3a76e945c9bc87b5da00",
+              "file": "quotations/quotations.spec.ts",
+              "line": 107,
+              "column": 7
+            },
+            {
+              "title": "PATCH /quotations/:id - Update quotation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 30,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:129:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 129
+                        },
+                        "snippet": "  127 |     });\n  128 |\n> 129 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  130 |     const data = await response.json();\n  131 |     expect(data.title).toBe('Updated Test Quotation');\n  132 |     expect(data.taxRate).toBe(8);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 129
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  127 |     });\n  128 |\n> 129 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  130 |     const data = await response.json();\n  131 |     expect(data.title).toBe('Updated Test Quotation');\n  132 |     expect(data.taxRate).toBe(8);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:129:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.630Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 129
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-f263a153f9c6c98008c8",
+              "file": "quotations/quotations.spec.ts",
+              "line": 120,
+              "column": 7
+            },
+            {
+              "title": "GET /quotations/:id/pdf - Download PDF",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 35,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 9,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:140:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 140
+                        },
+                        "snippet": "  138 |     });\n  139 |\n> 140 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  141 |     const contentType = response.headers()['content-type'];\n  142 |     expect(contentType).toContain('application/pdf');\n  143 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 140
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  138 |     });\n  139 |\n> 140 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  141 |     const contentType = response.headers()['content-type'];\n  142 |     expect(contentType).toContain('application/pdf');\n  143 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:140:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.126Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 140
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-0b4b6ccb0c26d903f92e",
+              "file": "quotations/quotations.spec.ts",
+              "line": 135,
+              "column": 7
+            },
+            {
+              "title": "POST /quotations/:id/send-email - Send quotation by email",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 31,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 8,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:153:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 153
+                        },
+                        "snippet": "  151 |     });\n  152 |\n> 153 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  154 |     const data = await response.json();\n  155 |     expect(data.success).toBe(true);\n  156 |     expect(data.recipients).toEqual(['test@example.com']);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 153
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  151 |     });\n  152 |\n> 153 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  154 |     const data = await response.json();\n  155 |     expect(data.success).toBe(true);\n  156 |     expect(data.recipients).toEqual(['test@example.com']);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:153:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.669Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 153
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-617d37a646e85185a54a",
+              "file": "quotations/quotations.spec.ts",
+              "line": 145,
+              "column": 7
+            },
+            {
+              "title": "PATCH /quotations/:id/status - Update quotation status",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 36,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 13,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:167:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 27,
+                          "line": 167
+                        },
+                        "snippet": "  165 |     });\n  166 |\n> 167 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  168 |     const data = await response.json();\n  169 |     expect(data.status).toBe('approved');\n  170 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 27,
+                            "line": 167
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  165 |     });\n  166 |\n> 167 |     expect(response.ok()).toBeTruthy();\n      |                           ^\n  168 |     const data = await response.json();\n  169 |     expect(data.status).toBe('approved');\n  170 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:167:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.140Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 27,
+                        "line": 167
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-7d49a046d12db81da8bc",
+              "file": "quotations/quotations.spec.ts",
+              "line": 159,
+              "column": 7
+            },
+            {
+              "title": "DELETE /quotations/:id - Delete quotation",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 33,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 12,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m401\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:189:31",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                          "column": 31,
+                          "line": 189
+                        },
+                        "snippet": "  187 |     });\n  188 |\n> 189 |     expect(response.status()).toBe(204);\n      |                               ^\n  190 |   });\n  191 | });\n  192 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                            "column": 31,
+                            "line": 189
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m401\u001b[39m\n\n  187 |     });\n  188 |\n> 189 |     expect(response.status()).toBe(204);\n      |                               ^\n  190 |   });\n  191 | });\n  192 |\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts:189:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:08.811Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/quotations/quotations.spec.ts",
+                        "column": 31,
+                        "line": 189
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "16dc48dbb0902ac21725-13d419f3e65b22f43ff3",
+              "file": "quotations/quotations.spec.ts",
+              "line": 172,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "scraper-notification.spec.ts",
+      "file": "scraper-notification.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Scraper Features",
+          "file": "scraper-notification.spec.ts",
+          "line": 168,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should create scraping job",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 37,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 39,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:173:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                          "column": 27,
+                          "line": 173
+                        },
+                        "snippet": "  171 |       data: { productId: 'test-id-1' },\n  172 |     });\n> 173 |     expect(response.ok()).toBe(true);\n      |                           ^\n  174 |     const data = await response.json();\n  175 |     expect(data).toHaveProperty('jobId');\n  176 |     expect(data).toHaveProperty('message');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                            "column": 27,
+                            "line": 173
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  171 |       data: { productId: 'test-id-1' },\n  172 |     });\n> 173 |     expect(response.ok()).toBe(true);\n      |                           ^\n  174 |     const data = await response.json();\n  175 |     expect(data).toHaveProperty('jobId');\n  176 |     expect(data).toHaveProperty('message');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:173:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.182Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                        "column": 27,
+                        "line": 173
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ea3baf847466dc2190af-3114d5c5264a37a8217b",
+              "file": "scraper-notification.spec.ts",
+              "line": 169,
+              "column": 7
+            },
+            {
+              "title": "should get supported sites",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 38,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 37,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:181:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                          "column": 27,
+                          "line": 181
+                        },
+                        "snippet": "  179 |   test('should get supported sites', async ({ request }) => {\n  180 |     const response = await request.get('/api/scraper/supported-sites');\n> 181 |     expect(response.ok()).toBe(true);\n      |                           ^\n  182 |     const data = await response.json();\n  183 |     expect(data.sites).toBeInstanceOf(Array);\n  184 |     expect(data.sites).toHaveLength(3);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                            "column": 27,
+                            "line": 181
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  179 |   test('should get supported sites', async ({ request }) => {\n  180 |     const response = await request.get('/api/scraper/supported-sites');\n> 181 |     expect(response.ok()).toBe(true);\n      |                           ^\n  182 |     const data = await response.json();\n  183 |     expect(data.sites).toBeInstanceOf(Array);\n  184 |     expect(data.sites).toHaveLength(3);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:181:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.304Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                        "column": 27,
+                        "line": 181
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ea3baf847466dc2190af-c5a2443c251ad3a16025",
+              "file": "scraper-notification.spec.ts",
+              "line": 179,
+              "column": 7
+            },
+            {
+              "title": "should check job status",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 39,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 42,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:189:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                          "column": 27,
+                          "line": 189
+                        },
+                        "snippet": "  187 |   test('should check job status', async ({ request }) => {\n  188 |     const response = await request.get('/api/scraper/job/123');\n> 189 |     expect(response.ok()).toBe(true);\n      |                           ^\n  190 |     const data = await response.json();\n  191 |     expect(data).toHaveProperty('state');\n  192 |     expect(data).toHaveProperty('progress');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                            "column": 27,
+                            "line": 189
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  187 |   test('should check job status', async ({ request }) => {\n  188 |     const response = await request.get('/api/scraper/job/123');\n> 189 |     expect(response.ok()).toBe(true);\n      |                           ^\n  190 |     const data = await response.json();\n  191 |     expect(data).toHaveProperty('state');\n  192 |     expect(data).toHaveProperty('progress');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:189:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.418Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                        "column": 27,
+                        "line": 189
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ea3baf847466dc2190af-45ad887987574b5e96fd",
+              "file": "scraper-notification.spec.ts",
+              "line": 187,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Notification Features",
+          "file": "scraper-notification.spec.ts",
+          "line": 196,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should send daily report",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 40,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 39,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:204:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                          "column": 27,
+                          "line": 204
+                        },
+                        "snippet": "  202 |       },\n  203 |     });\n> 204 |     expect(response.ok()).toBe(true);\n      |                           ^\n  205 |     const data = await response.json();\n  206 |     expect(data.success).toBe(true);\n  207 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                            "column": 27,
+                            "line": 204
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  202 |       },\n  203 |     });\n> 204 |     expect(response.ok()).toBe(true);\n      |                           ^\n  205 |     const data = await response.json();\n  206 |     expect(data.success).toBe(true);\n  207 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:204:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.597Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                        "column": 27,
+                        "line": 204
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ea3baf847466dc2190af-8c1dcc0318c641f673e9",
+              "file": "scraper-notification.spec.ts",
+              "line": 197,
+              "column": 7
+            },
+            {
+              "title": "should send low stock alert",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 41,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 35,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:218:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                          "column": 27,
+                          "line": 218
+                        },
+                        "snippet": "  216 |       },\n  217 |     });\n> 218 |     expect(response.ok()).toBe(true);\n      |                           ^\n  219 |     const data = await response.json();\n  220 |     expect(data.success).toBe(true);\n  221 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                            "column": 27,
+                            "line": 218
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  216 |       },\n  217 |     });\n> 218 |     expect(response.ok()).toBe(true);\n      |                           ^\n  219 |     const data = await response.json();\n  220 |     expect(data.success).toBe(true);\n  221 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:218:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.644Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                        "column": 27,
+                        "line": 218
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ea3baf847466dc2190af-77ce368d754b147c58c2",
+              "file": "scraper-notification.spec.ts",
+              "line": 209,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Quotation Email Features",
+          "file": "scraper-notification.spec.ts",
+          "line": 224,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should send quotation email with multiple recipients",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 42,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 36,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:231:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                          "column": 27,
+                          "line": 231
+                        },
+                        "snippet": "  229 |       },\n  230 |     });\n> 231 |     expect(response.ok()).toBe(true);\n      |                           ^\n  232 |     const data = await response.json();\n  233 |     expect(data.success).toBe(true);\n  234 |     expect(data.recipients).toHaveLength(2);"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                            "column": 27,
+                            "line": 231
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  229 |       },\n  230 |     });\n> 231 |     expect(response.ok()).toBe(true);\n      |                           ^\n  232 |     const data = await response.json();\n  233 |     expect(data.success).toBe(true);\n  234 |     expect(data.recipients).toHaveLength(2);\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts:231:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.678Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/scraper-notification.spec.ts",
+                        "column": 27,
+                        "line": 231
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "ea3baf847466dc2190af-bb7742ca80e6674925c4",
+              "file": "scraper-notification.spec.ts",
+              "line": 225,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "warehouses/warehouses.spec.ts",
+      "file": "warehouses/warehouses.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Warehouses API",
+          "file": "warehouses/warehouses.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "POST /warehouses - Create new warehouse",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 43,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 13,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.718Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f27e8098b4b4c8115573-93f82ba9a44412b739cf",
+              "file": "warehouses/warehouses.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "GET /warehouses - Get all warehouses",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 44,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 9,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.836Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "f27e8098b4b4c8115573-5b7a694f81e295f4e2a3",
+              "file": "warehouses/warehouses.spec.ts",
+              "line": 41,
+              "column": 7
+            },
+            {
+              "title": "GET /warehouses/:id - Get single warehouse",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 45,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts:60:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                          "column": 27,
+                          "line": 60
+                        },
+                        "snippet": "  58 |     });\n  59 |\n> 60 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  61 |     const data = await response.json();\n  62 |     expect(data.id).toBe(warehouseId);\n  63 |     expect(data.code).toBe('WH-001');"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                            "column": 27,
+                            "line": 60
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  58 |     });\n  59 |\n> 60 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  61 |     const data = await response.json();\n  62 |     expect(data.id).toBe(warehouseId);\n  63 |     expect(data.code).toBe('WH-001');\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts:60:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:09.981Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                        "column": 27,
+                        "line": 60
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f27e8098b4b4c8115573-aff91950cefd31a661fe",
+              "file": "warehouses/warehouses.spec.ts",
+              "line": 53,
+              "column": 7
+            },
+            {
+              "title": "PATCH /warehouses/:id - Update warehouse",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 46,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 7,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts:76:27",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                          "column": 27,
+                          "line": 76
+                        },
+                        "snippet": "  74 |     });\n  75 |\n> 76 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  77 |     const data = await response.json();\n  78 |     expect(data.phone).toBe('02-9876-5432');\n  79 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                            "column": 27,
+                            "line": 76
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n  74 |     });\n  75 |\n> 76 |     expect(response.ok()).toBeTruthy();\n     |                           ^\n  77 |     const data = await response.json();\n  78 |     expect(data.phone).toBe('02-9876-5432');\n  79 |   });\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts:76:27"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:10.016Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                        "column": 27,
+                        "line": 76
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f27e8098b4b4c8115573-a219a49993720c73828e",
+              "file": "warehouses/warehouses.spec.ts",
+              "line": 66,
+              "column": 7
+            },
+            {
+              "title": "DELETE /warehouses/:id - Delete warehouse",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "api",
+                  "projectName": "api",
+                  "results": [
+                    {
+                      "workerIndex": 47,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 7,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m500\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m500\u001b[39m\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts:88:31",
+                        "location": {
+                          "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                          "column": 31,
+                          "line": 88
+                        },
+                        "snippet": "  86 |     });\n  87 |\n> 88 |     expect(response.status()).toBe(204);\n     |                               ^\n  89 |   });\n  90 | });\n  91 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                            "column": 31,
+                            "line": 88
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m204\u001b[39m\nReceived: \u001b[31m500\u001b[39m\n\n  86 |     });\n  87 |\n> 88 |     expect(response.status()).toBe(204);\n     |                               ^\n  89 |   });\n  90 | });\n  91 |\n    at /Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts:88:31"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-07T03:59:10.055Z",
+                      "annotations": [],
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "/Users/younghwa.jin/Documents/parts_monitor/parts-monitor/tests/warehouses/warehouses.spec.ts",
+                        "column": 31,
+                        "line": 88
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "f27e8098b4b4c8115573-9064f3122ae4e3317b81",
+              "file": "warehouses/warehouses.spec.ts",
+              "line": 81,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-07T03:58:58.475Z",
+    "duration": 11698.541,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 46,
+    "flaky": 0
+  }
+}
